@@ -1,0 +1,9 @@
+import requests
+
+url = 'https://myeas.portaltest.test.mucre1.retloc/api/v1/email/99999QX/config/list/phishing-detection/allowlist'
+auth_token="eyJraWQiOiIyIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJrYXRhbG9uLmVhcy1pdC5tb3R1QHJldGFydXMuZGUiLCJhdWQiOiJ1cm46ZWFzZW1haWw6MWE0YTUyZjAtODFkNi00NDdhLWIzYTYtZTU3OTEyODk2YjNlIiwic2NvcGUiOlsicmluZzowIl0sImlzcyI6InVybjplYXM6dGVzdCIsInN0b3JlIjoiZTVhNmY0MDg3Yzk3NTU1YWFlOTIyYzZiYTc0NzYzMjI1MjI4MDI1YmEzNmY4OWU3NDA3Yjc2NWIxMmM3NmRkMyIsImV4cCI6MTcxNDcyOTk1OCwiaWF0IjoxNzE0NzI2Mjk4LCJqdGkiOiJiMmQ0Yjg4YS04YWIyLTQ1Y2YtODExMi1mY2I0Nzc1NzIzZGIifQ.C8WIxPnSHyf31GXDETBMDAd1Dho8Mn_yQPjk7AIOEdktPUkoiPujNgipfwkq8wbMByASjb7nYaYXd7IpBjKr50p0JxVKSNI-RNlxlfS7hn5f7h-sApoYunHo5ov95rRI9v9i1dwJVv6NEZD_Eiq_RnFCbcTv3GtgRPOTMDiTtRo"
+headers = {'Authorization': f"Bearer {auth_token}"}
+myobj = {'value': 'apisub9.domain.com', 'comment': 'testing automation'}
+#x = requests.post(url, json=myobj)
+x = requests.get(url,headers=headers)
+print(x.text)
